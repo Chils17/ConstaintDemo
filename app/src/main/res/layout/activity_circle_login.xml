@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:flip="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.webmyne.constaint.CircleLoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#1D2063" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F92562" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/_310sdp"
+        android:layout_height="@dimen/_310sdp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/back_circle"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/lvLogin"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_280sdp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/circle"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+    </LinearLayout>
+
+   <!-- <LinearLayout
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_280sdp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/circle"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.webmyne.constaint.custom.TfTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Sign in"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                app:ftype="regular" />
+
+            <com.webmyne.constaint.custom.TfTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="Sign in Your Account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:ftype="regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/border_bg"
+                android:minHeight="@dimen/_38sdp">
+
+                <com.webmyne.constaint.custom.TfEditTextSimple
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/colorBlack"
+                    android:hint="User name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_14ssp"
+                    app:fEdittype="regular" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/border_bg"
+                android:minHeight="@dimen/_38sdp">
+
+                <com.webmyne.constaint.custom.TfEditTextSimple
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/colorBlack"
+                    android:hint="Password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_14ssp"
+                    app:fEdittype="regular" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.webmyne.constaint.custom.TfTextView
+                    android:id="@+id/txtForgotPassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp"
+                    app:ftype="medium" />
+            </LinearLayout>
+
+            <com.webmyne.constaint.custom.TfButton
+                android:id="@+id/btnLogin"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/button"
+                android:text="Sign in"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/llRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.webmyne.constaint.custom.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="@string/don_t_have_an_account"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        app:ftype="regular" />
+
+                    <com.webmyne.constaint.custom.TfTextView
+                        android:id="@+id/txtSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="Sign Up"
+                        android:textColor="#F92562"
+                        android:textSize="@dimen/_14ssp"
+                        app:ftype="regular" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lvSignUp"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_280sdp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/circle"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.webmyne.constaint.custom.TfTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Sign Up"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+                app:ftype="regular" />
+
+            <com.webmyne.constaint.custom.TfTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="4dp"
+                android:text="Create Your Account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                app:ftype="regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/border_bg"
+                android:minHeight="@dimen/_38sdp">
+
+                <com.webmyne.constaint.custom.TfEditTextSimple
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/colorBlack"
+                    android:hint="User name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_14ssp"
+                    app:fEdittype="regular" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/border_bg"
+                android:minHeight="@dimen/_38sdp">
+
+                <com.webmyne.constaint.custom.TfEditTextSimple
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/colorBlack"
+                    android:hint="Mobile"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_14ssp"
+                    app:fEdittype="regular" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="@drawable/border_bg"
+                android:minHeight="@dimen/_38sdp">
+
+                <com.webmyne.constaint.custom.TfEditTextSimple
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@color/colorBlack"
+                    android:hint="Password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_14ssp"
+                    app:fEdittype="regular" />
+
+            </LinearLayout>
+
+            <com.webmyne.constaint.custom.TfButton
+                android:id="@+id/btnSignUp"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/button"
+                android:text="Register"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.webmyne.constaint.custom.TfTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="@string/have_an_account"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        app:ftype="regular" />
+
+                    <com.webmyne.constaint.custom.TfTextView
+                        android:id="@+id/txtLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="Login"
+                        android:textColor="#F92562"
+                        android:textSize="@dimen/_14ssp"
+                        app:ftype="regular" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_image"
+    tools:context="com.webmyne.constaint.RegisterActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/flImageSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="@dimen/_96sdp"
+                    android:layout_height="@dimen/_96sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:src="@drawable/man" />
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:src="@drawable/camera" />
+            </FrameLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="@dimen/_4sdp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.webmyne.constaint.custom.TfTextView
+                            android:id="@+id/txtCollapse"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Personal Profile"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16ssp"
+                            app:ftype="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgPersonalArrow"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/imgPersonalArrow"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.444" />
+
+                        <ImageView
+                            android:id="@+id/imgPersonalArrow"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_sort_up" />
+
+                        <net.cachapa.expandablelayout.ExpandableLayout
+                            android:id="@+id/expandablePersonalDetail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            app:el_duration="1000"
+                            app:el_expanded="false"
+                            app:el_parallax="0.5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="@+id/txtCollapse"
+                            app:layout_constraintRight_toRightOf="@+id/imgPersonalArrow"
+                            app:layout_constraintTop_toBottomOf="@+id/imgPersonalArrow"
+                            app:layout_expandable="true">
+
+                            <android.support.constraint.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_avatar"
+                                    android:hint="@string/first_name"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:maxLines="1"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintHorizontal_bias="0.487"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_avatar"
+                                    android:hint="@string/middle_name"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:maxLines="1"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintLeft_toLeftOf="@+id/tfEditTextSimple"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple" />
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_avatar"
+                                    android:hint="@string/last_name"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:maxLines="1"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintLeft_toLeftOf="@+id/tfEditTextSimple2"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple2"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple2" />
+
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_email"
+                                    android:hint="@string/email"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:maxLines="1"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintLeft_toLeftOf="@+id/tfEditTextSimple3"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple3"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple3" />
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_smartphone_call"
+                                    android:hint="@string/mobile"
+                                    android:inputType="number"
+                                    android:maxLines="1"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintLeft_toLeftOf="@+id/tfEditTextSimple4"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple4"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple4" />
+
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_key"
+                                    android:hint="@string/password"
+                                    android:inputType="textPassword"
+                                    android:maxLines="1"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintLeft_toLeftOf="@+id/tfEditTextSimple5"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple5"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple5" />
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_key"
+                                    android:hint="@string/confirm_password"
+                                    android:inputType="textPassword"
+                                    android:maxLines="1"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintLeft_toLeftOf="@+id/tfEditTextSimple6"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple6"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple6" />
+
+                                <com.webmyne.constaint.custom.TfButton
+                                    android:id="@+id/btnNext"
+                                    style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:text="@string/next"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple7"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple7"
+                                    app:layout_constraintVertical_bias="0.0" />
+
+                            </android.support.constraint.ConstraintLayout>
+                        </net.cachapa.expandablelayout.ExpandableLayout>
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="@dimen/_4sdp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.webmyne.constaint.custom.TfTextView
+                            android:id="@+id/txtAddress"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="Address"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16ssp"
+                            app:ftype="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgAddArrow"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/imgAddArrow"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageView
+                            android:id="@+id/imgAddArrow"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            android:src="@drawable/ic_sort_up"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <net.cachapa.expandablelayout.ExpandableLayout
+                            android:id="@+id/expandableAddLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            app:el_duration="1000"
+                            app:el_expanded="false"
+                            app:el_parallax="0.5"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imgAddArrow"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginBottom="8dp">
+
+                            <android.support.constraint.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_avatar"
+                                    android:hint="@string/address_1"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:maxLength="500"
+                                    android:maxLines="3"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_avatar"
+                                    android:hint="@string/address_2"
+                                    android:inputType="textPersonName|textNoSuggestions"
+                                    android:maxLength="500"
+                                    android:maxLines="3"
+                                    android:minHeight="@dimen/_30sdp"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="@+id/tfEditTextSimple8"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple8"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple8" />
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:id="@+id/constraintLayout2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    app:layout_constraintLeft_toLeftOf="@+id/tfEditTextSimple9"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple9"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple9">
+
+
+                                    <ImageView
+                                        android:id="@+id/imageView6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:src="@drawable/ic_location_pin"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <Spinner
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:entries="@array/country_array"
+                                        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                                        app:layout_constraintLeft_toRightOf="@+id/imageView6"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </Spinner>
+                                </android.support.constraint.ConstraintLayout>
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:id="@+id/constraintLayout3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    app:layout_constraintLeft_toLeftOf="@+id/constraintLayout2"
+                                    app:layout_constraintRight_toRightOf="@+id/constraintLayout2"
+                                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+                                    <ImageView
+                                        android:id="@+id/imageView7"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:src="@drawable/ic_location_pin"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <Spinner
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:entries="@array/state_india"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toRightOf="@+id/imageView7"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </Spinner>
+                                </android.support.constraint.ConstraintLayout>
+
+                                <android.support.constraint.ConstraintLayout
+                                    android:id="@+id/constraintLayout4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    app:layout_constraintLeft_toLeftOf="@+id/constraintLayout3"
+                                    app:layout_constraintRight_toRightOf="@+id/constraintLayout3"
+                                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                                    <ImageView
+                                        android:id="@+id/imageView8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:src="@drawable/ic_location_pin"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <Spinner
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:entries="@array/city_india"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintLeft_toRightOf="@+id/imageView8"
+                                        app:layout_constraintRight_toRightOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                    </Spinner>
+
+                                </android.support.constraint.ConstraintLayout>
+
+                                <com.webmyne.constaint.custom.TfEditTextSimple
+                                    android:id="@+id/tfEditTextSimple10"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:background="@drawable/edt_border"
+                                    android:drawableLeft="@drawable/ic_location_pin"
+                                    android:hint="@string/zipcode"
+                                    android:inputType="number"
+                                    android:maxLength="6"
+                                    android:maxLines="1"
+                                    android:textSize="@dimen/_14ssp"
+                                    app:fEdittype="regular"
+                                    app:layout_constraintLeft_toLeftOf="@+id/constraintLayout4"
+                                    app:layout_constraintRight_toRightOf="@+id/constraintLayout4"
+                                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout4" />
+
+
+                                <com.webmyne.constaint.custom.TfButton
+                                    android:id="@+id/btnNextMemberShipPlan"
+                                    style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/next"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintRight_toRightOf="@+id/tfEditTextSimple10"
+                                    app:layout_constraintTop_toBottomOf="@+id/tfEditTextSimple10" />
+
+                            </android.support.constraint.ConstraintLayout>
+
+                        </net.cachapa.expandablelayout.ExpandableLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="@dimen/_4sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/tfTextView"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.webmyne.constaint.custom.TfTextView
+                            android:id="@+id/txtMembership"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/member_ship_plan"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16ssp"
+                            app:ftype="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/imgMembershipPlanArrow"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@+id/imgMembershipPlanArrow"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageView
+                            android:id="@+id/imgMembershipPlanArrow"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginRight="8dp"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_sort_up" />
+
+                        <net.cachapa.expandablelayout.ExpandableLayout
+                            android:id="@+id/expandableMembershipDetail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            app:el_duration="1000"
+                            app:el_expanded="false"
+                            app:el_parallax="0.5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imgMembershipPlanArrow"
+                            app:layout_expandable="true">
+
+                            <android.support.constraint.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RadioGroup
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginTop="8dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0">
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Silver" />
+
+                                    <RadioButton
+                                        android:id="@+id/radioButton"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Gold-One Boook Unlimited" />
+
+                                    <RadioButton
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Silver (25% off Plan)" />
+                                </RadioGroup>
+                            </android.support.constraint.ConstraintLayout>
+
+                        </net.cachapa.expandablelayout.ExpandableLayout>
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <com.webmyne.constaint.custom.TfTextView
+                    android:id="@+id/tfTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/have_any_referral_code"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintBottom_toTopOf="@+id/tfEditTextSimple12"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <com.webmyne.constaint.custom.TfEditTextSimple
+                    android:id="@+id/tfEditTextSimple12"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/login_edt"
+                    android:hint="@string/referance_code"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:padding="@dimen/_8sdp"
+                    android:textSize="@dimen/_14ssp"
+                    app:fEdittype="regular"
+                    app:layout_constraintBottom_toTopOf="@+id/tfTextView2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <com.webmyne.constaint.custom.TfTextView
+                    android:id="@+id/tfTextView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/do_you_want_to_receive_newsletter_from_the_site"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/white"
+                        android:text="@string/yes"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="normal" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:buttonTint="@color/white"
+                        android:text="@string/no"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16ssp"
+                        android:textStyle="normal" />
+
+                </RadioGroup>
+
+                <com.webmyne.constaint.custom.TfButton
+                    android:id="@+id/btnRegister"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:text="@string/register"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/tfTextView5"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <com.webmyne.constaint.custom.TfTextView
+                    android:id="@+id/tfTextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:text="@string/have_an_account"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/tfTextView4"
+                    app:layout_constraintHorizontal_chainStyle="spread" />
+
+                <com.webmyne.constaint.custom.TfTextView
+                    android:id="@+id/tfTextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/_18ssp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tfTextView5"
+                    app:layout_constraintLeft_toRightOf="@+id/tfTextView5"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

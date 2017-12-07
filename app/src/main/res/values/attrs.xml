@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TfEditTextSimple">
+        <attr name="isBoldEditText" format="boolean" />
+        <attr name="fEdittype">
+            <enum name="regular" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="semibold" value="3" />
+            <enum name="bold" value="4" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="TfTextView">
+        <attr name="isBold" format="boolean" />
+        <attr name="ftype">
+            <enum name="regular" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="semibold" value="3" />
+            <enum name="bold" value="4" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SearchableSpinner">
+        <attr name="hintText" format="string"/>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="FlipViewController">
+        <attr name="orientation" format="enum">
+            <enum name="vertical" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr>
+
+        <attr name="animationBitmapFormat" format="enum">
+            <enum name="ARGB_8888" value="0"/>
+            <enum name="ARGB_4444" value="1"/>
+            <enum name="RGB_565" value="2"/>
+        </attr>
+    </declare-styleable>
+
+
+</resources>
